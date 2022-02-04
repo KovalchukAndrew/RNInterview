@@ -14,26 +14,5 @@ export const styles = StyleSheet.create({
     itemLabel: {
         fontSize: 14,
         color: "#2A6076",
-
-    },
-    ratingContainer: {
-        display: "flex",
-        flexDirection: "column"
-    },
-    rating: {
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "flex-end"
-    },
-    ratingItem: {
-        marginLeft: 3,
-        width: 13,
-        height: 13,
-    },
-    ratingText: {
-        marginTop: 12,
-        color: "#CECECE"
     }
-
-
 });
