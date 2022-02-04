@@ -1,32 +1,26 @@
 import React from 'react';
-import {
-  ScrollView,
-  StyleSheet,
-} from 'react-native';
-
 import {TEST_DATA} from './shared/Constants'
-import Level from "./components/Level";
-
+import { ScrollView } from 'react-native';
+import Level from "./components/level/Level";
 
 const App = () => {
 
   return (
     <ScrollView>
-      <Level
-          label={TEST_DATA[0].label}
-          subtitle={TEST_DATA[0].subtitle}
-          items={TEST_DATA[0].items}
-          progress={TEST_DATA[0].progress}
-          />
-      <Level
-          label={TEST_DATA[1].label}
-          subtitle={TEST_DATA[1].subtitle}
-          items={TEST_DATA[1].items}
-          progress={TEST_DATA[1].progress}
-      />
+
+        {
+            TEST_DATA.map(el => {
+                return <Level
+                    key={el.id}
+                    label={el.label}
+                    subtitle={el.subtitle}
+                    items={el.items}
+                    progress={el.progress}
+                />
+            })
+        }
     </ScrollView>
   );
 };
-
 
 export default App;
